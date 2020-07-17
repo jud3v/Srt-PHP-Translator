@@ -2,8 +2,8 @@
 this package allowing you to translate .srt files to another language
 
 ####Requirements:
-#####php-version min: `7+`
-#####composer: `required`
+1. php-version min: `7+`
+2. composer: `required`
 
 #### How to use ?
 1. clone last release `git clone https://github.com/judikaelB/Srt-PHP-Translator/tree/v1.0.0`
