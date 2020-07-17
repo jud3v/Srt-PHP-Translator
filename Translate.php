@@ -15,6 +15,7 @@ class Translate
     public function __construct()
     {
         if (PHP_SAPI != "cli") {
+            echo 'This script need to be executed in CLI !';
             exit;
         }
     }
