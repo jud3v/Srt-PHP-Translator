@@ -3,8 +3,15 @@ declare(strict_types=1);
 
 require 'vendor/autoload.php';
 require 'Colors.php';
+
+/*
+ * Translate from cli
+ */
 class Translate
 {
+    /**
+     * Translate constructor.
+     */
     public function __construct()
     {
         if (PHP_SAPI != "cli") {
@@ -12,6 +19,9 @@ class Translate
         }
     }
 
+    /**
+     * Show the man page
+     */
     private static function showHelp()
     {
         $help = 'Welcome To PHP Translator !'.PHP_EOL.PHP_EOL;
@@ -25,8 +35,6 @@ class Translate
 
     /**
      * Get argument from command line interface.
-     *
-     * @throws ErrorException
      */
     public static function getArgument()
     {
@@ -37,7 +45,7 @@ class Translate
         $shortopts .= "a:";  // Fichier a traduire
 
         $longopts  = array(
-            "help",     // Valeur requise
+            "help",
         );
 
         $options = getopt($shortopts, $longopts);
@@ -46,11 +54,12 @@ class Translate
                 self::showHelp();
             }
         }
-        if (count($options) > 3 || count($options) < 3) {
+        if (count($options) < 3) {
             echo $color->getColoredString('Required parameter are missing !','black','red').PHP_EOL;
             self::showHelp();
             exit;
         } else {
+            //return false;
             self::translate($options);
         }
     }
@@ -102,4 +111,5 @@ class Translate
         }
     }
 }
+//var_dump($argv);
 Translate::getArgument();
