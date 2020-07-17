@@ -1,6 +1,7 @@
 {
-    "name": "user/translator",
+    "name": "jud3v/srt-php-translator",
     "type": "project",
+    "description": "This is an open source srt file translator.",
     "require": {
         "stichoza/google-translate-php": "^4.1"
     },
