@@ -1,7 +1,7 @@
 # Srt-PHP-Translator
 this package allowing you to translate .srt files to another language
 
-####Requirements:
+#### Requirements:
 1. php-version min: `7+`
 2. composer: `required`
 
