@@ -1,0 +1,8 @@
+{
+    "name": "user/translator",
+    "type": "project",
+    "require": {
+        "stichoza/google-translate-php": "^4.1"
+    },
+    "license": "MIT"
+}
