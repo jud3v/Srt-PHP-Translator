@@ -1,6 +1,23 @@
 # Srt-PHP-Translator
-this package allowing you to translate srt files into some languages, using google translate and Stichoza/google-translate-php
+this package allowing you to translate .srt files to another language
 
-1. installing `composer install`
-2. type help command `php Translate.php help`
-3. use -a for specify a srt file to translate, -f the source laguage of srt file, -d the dist of wanted lang.
+####Requirements:
+#####php-version min: `7+`
+#####composer: `required`
+
+#### How to use ?
+1. installing dependencies with : ` composer install `
+2. use -a=/absolute/path/to/.srt/file 
+3. -f=/country-language-code/ `e.g: -f=fr`
+4. -d=/wanted-language-code/ `e.g: -d=en`
+
+after the script finish you will see in the path directory (that you previously set in -d option), of the srt file a copy of the original file will the translation.
+
+#### Error ?
+If you have any error i will be happy to help us !
+
+#### Contributing ?
+Contributing are welcome !
+
+#### Dependencies:
+[Stichoza/google-translate-php ](https://github.com/Stichoza/google-translate-php)  
