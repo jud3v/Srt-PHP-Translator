@@ -86,7 +86,7 @@ class Translate
                     $translate->setTarget($dist);
                     $ch = fopen($copy,'a');
                     fwrite($ch,$translate->translate($value).PHP_EOL);
-                    echo $color->getColoredString('Translating:'. $value,'white','black');
+                    echo $color->getColoredString('Translating: '. $value,'white','black');
                     echo $color->getColoredString('Translated: '.$translate->translate($value),'green','white').PHP_EOL;
                     fclose($ch);
                 }
