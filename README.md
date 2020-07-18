@@ -4,29 +4,40 @@
 [![CodeInspector](https://www.code-inspector.com/project/11162/score/svg)](https://www.code-inspector.com/project/11162/score/svg)
 [![CodeInspector](https://www.code-inspector.com/project/11162/status/svg)](https://www.code-inspector.com/project/11162/status/svg)
 
-##### this package translates .srt files to another language
+##### this package translates subtitle .srt files to another language
 
-#### Requirements:
+## Requirements:
 1. php-version min: `7+`
 2. composer: `required`
 
-#### How to use ?
-1. clone last release `git clone https://github.com/judikaelB/Srt-PHP-Translator.git`
-2. installing dependencies with : ` composer install `
+## Quick Start 
+1. clone last release ```bash git clone https://github.com/judikaelB/Srt-PHP-Translator.git ```
+2. installing dependencies with : ```bash composer install ```
 3. use -a /absolute/path/to/.srt/file 
 4. -f lang source of file to translate  `e.g: -f fr`
 5. -d the desired language `e.g: -d en`
 
-after the script finish you will see in the path directory (that you previously set in -d option), of the srt file a copy of the original file with the translation.
+after the script finish you will see in the path directory (that you previously set in -a option), of the srt file a copy of the original file with the translation.
 
-#### Error ?
-If you have any error i will be happy to help us !
+## Error ?
+Open new issue, I will be happy to help us :
 
-#### Contributing ?
-Contributing are welcome !
+## Contributing
 
-#### Dependencies:
+1. Fork it!
+2. Create your feature branch: `git checkout -b my-new-feature`
+3. Commit your changes: `git commit -am 'Add some feature'`
+4. Push to the branch: `git push origin my-new-feature`
+5. Submit a pull request :D
+
+## Dependencies:
 [Stichoza/google-translate-php ](https://github.com/Stichoza/google-translate-php)  
 
-#### known bug:
+## known bug:
 1. EN to FR the number `10` will be replaced by `dix`, 'google need to fix it'
+
+
+**SAO** © [EGOIST](https://github.com/egoist), Released under the [MIT](https://egoist.mit-license.org/) License.<br>
+Authored and maintained by EGOIST with help from contributors ([list](https://github.com/saojs/sao/contributors)).
+
+> GitHub [@Jud3v](https://github.com/jud3v) · Twitter [@jud3v](https://twitter.com/amjud3v)
