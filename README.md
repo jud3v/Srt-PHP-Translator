@@ -1,5 +1,6 @@
 # Srt-PHP-Translator
-this package allowing you to translate .srt files to another language
+[![CodeFactor](https://www.codefactor.io/repository/github/jud3v/srt-php-translator/badge)](https://www.codefactor.io/repository/github/jud3v/srt-php-translator)
+##### this package translates .srt files to another language
 
 #### Requirements:
 1. php-version min: `7+`
