@@ -8,11 +8,11 @@ this package allowing you to translate .srt files to another language
 #### How to use ?
 1. clone last release `git clone https://github.com/judikaelB/Srt-PHP-Translator/releases/tag/v1.0.0` or clone directly master branch
 2. installing dependencies with : ` composer install `
-3. use -a=/absolute/path/to/.srt/file 
-4. -f=/country-language-code/ `e.g: -f=fr`
-5. -d=/wanted-language-code/ `e.g: -d=en`
+3. use -a /absolute/path/to/.srt/file 
+4. -f lang source of file to translate  `e.g: -f fr`
+5. -d the desired language `e.g: -d en`
 
-after the script finish you will see in the path directory (that you previously set in -d option), of the srt file a copy of the original file will the translation.
+after the script finish you will see in the path directory (that you previously set in -d option), of the srt file a copy of the original file with the translation.
 
 #### Error ?
 If you have any error i will be happy to help us !
