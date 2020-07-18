@@ -14,7 +14,8 @@ class Translate
 
     private static function showHelp()
     {
-        $help = 'Welcome To PHP Translator !'.PHP_EOL.PHP_EOL;
+        $help = 'Welcome To Srt PHP Translator !'.PHP_EOL;
+        $help .= '© @jud3v https://github.com/jud3v'.PHP_EOL.PHP_EOL;
         $help .= '--help,-help,help Show the current block'.PHP_EOL;
         $help .= '-f language of source'.PHP_EOL;
         $help .= '-d language of destination'.PHP_EOL;
@@ -77,16 +78,17 @@ class Translate
 
             if (file_exists($copy)) {
                 $content = file($file); //content of the original file to translate into the copyied file.
-
+                $i = 0;
                 foreach ($content as $key => $value) {
-                    sleep(1);
+                    $i++;
                     $translate = new Stichoza\GoogleTranslate\GoogleTranslate();
                     $translate->setSource($source);
                     $translate->setTarget($dist);
                     $ch = fopen($copy,'a');
                     fwrite($ch,$translate->translate($value).PHP_EOL);
-                    echo $color->getColoredString('Translating-'.$source.': '. $value,'white','black');
-                    echo $color->getColoredString('Translated-'.$dist.': '.$translate->translate($value),'green','white').PHP_EOL;
+                    echo PHP_EOL;
+                    echo $color->getColoredString($i.'|Translating-'.$source.': '. $value,'white','black');
+                    echo $color->getColoredString($i.'|Translated-'.$dist.': '.$translate->translate($value),'green','white').PHP_EOL;
                     fclose($ch);
                 }
                 echo $color->getColoredString("All Is Done ! \n The time of translation: ".($start_time),'green','white').PHP_EOL;
