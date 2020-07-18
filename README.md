@@ -1,6 +1,7 @@
 # Srt-PHP-Translator
 [![CodeFactor](https://www.codefactor.io/repository/github/jud3v/srt-php-translator/badge)](https://www.codefactor.io/repository/github/jud3v/srt-php-translator)
 [![Maintainability](https://api.codeclimate.com/v1/badges/3ba6203abe5fe65834ed/maintainability)](https://codeclimate.com/github/jud3v/Srt-PHP-Translator/maintainability)
+
 ##### this package translates .srt files to another language
 
 #### Requirements:
