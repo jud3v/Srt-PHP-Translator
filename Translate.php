@@ -94,7 +94,7 @@ class Translate
                     }
                     fclose($ch);
                 }
-                echo $color->getColoredString("All Is Done ! \n Time to translate ".$i." lines: ".gmdate(strval((time()-$start_time))),'green','white').PHP_EOL;
+                echo $color->getColoredString("All Is Done ! \n Time to translate ".$i." lines: ".(time()-$start_time)),'green','white').PHP_EOL;
                 exit;
             } else {
                 echo 'The copy of your file have failed !'.PHP_EOL;
