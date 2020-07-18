@@ -44,6 +44,7 @@ class Translate
         foreach ($options as $key => $value) {
             if ($key === "help") {
                 self::showHelp();
+                exit;
             }
         }
         if (count($options) > 3 || count($options) < 3) {
@@ -69,7 +70,7 @@ class Translate
         $source = $option['f'];
 
         if (file_exists($file)) {
-            copy($file,str_replace('.srt','-translated.srt',$file));
+            //copy($file,str_replace('.srt','-translated.srt',$file));
             $copy = str_replace('.srt','-translated-to-'.$dist.'.srt',$file); //get path of copied file.
             echo 'The path of your translated file is: '.$copy.PHP_EOL;
             $ch = fopen($copy,'w'); // remove content of file with mode w https://www.php.net/manual/fr/function.fopen.php.
@@ -85,7 +86,7 @@ class Translate
                     $translate->setTarget($dist);
                     $ch = fopen($copy,'a');
                     fwrite($ch,$translate->translate($value).PHP_EOL);
-                    echo $color->getColoredString('Translating:'. $value,'black','white');
+                    echo $color->getColoredString('Translating:'. $value,'white','black');
                     echo $color->getColoredString('Translated: '.$translate->translate($value),'green','white').PHP_EOL;
                     fclose($ch);
                 }
