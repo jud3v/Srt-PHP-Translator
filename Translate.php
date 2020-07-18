@@ -20,6 +20,7 @@ class Translate
         $help .= '-f language of source'.PHP_EOL;
         $help .= '-d language of destination'.PHP_EOL;
         $help .= '-a file to translate'.PHP_EOL.PHP_EOL;
+        $help .= '-q no interaction'.PHP_EOL.PHP_EOL;
         echo $help;
         exit;
     }
@@ -36,6 +37,7 @@ class Translate
         $shortopts .= "f:";  // source of file
         $shortopts .= "d:";  // wanted language
         $shortopts .= "a:";  // file to translate
+        $shortopts .= "q";  // -quiet no interaction
 
         $longopts  = array(
             "help",     // Valeur requise
@@ -75,7 +77,6 @@ class Translate
             echo 'The path of your translated file is: '.$copy.PHP_EOL;
             $ch = fopen($copy,'w'); // create the missing file with flag f and  remove them content  https://www.php.net/manual/fr/function.fopen.php.
             fclose($ch);
-
             if (file_exists($copy)) {
                 $content = file($file); //content of the original file to translate into the copyied file.
                 $i = 0;
@@ -86,21 +87,21 @@ class Translate
                     $translate->setTarget($dist);
                     $ch = fopen($copy,'a');
                     fwrite($ch,$translate->translate($value).PHP_EOL);
-                    echo PHP_EOL;
-                    echo $color->getColoredString('Line: '.$i.' | Translating-'.$source.': '. $value,'white','black');
-                    echo $color->getColoredString('Line: '.$i.' | Translated-'.$dist.': '.$translate->translate($value),'green','white').PHP_EOL;
+                    if (!isset($option['q'])){
+                        echo PHP_EOL;
+                        echo $color->getColoredString('Line: '.$i.' | Translating-'.$source.': '. $value,'white','black');
+                        echo $color->getColoredString('Line: '.$i.' | Translated-'.$dist.': '.$translate->translate($value),'green','white').PHP_EOL;
+                    }
                     fclose($ch);
                 }
-                echo $color->getColoredString("All Is Done ! \n The time of translation: ".(time() - $start_time).' seconds','green','white').PHP_EOL;
+                echo $color->getColoredString("All Is Done ! \n Time to translate ".$i." lines: ".gmdate((time() - $start_time)),'green','white').PHP_EOL;
                 exit;
-
             } else {
-                echo 'The copy of your file have failed !';
+                echo 'The copy of your file have failed !'.PHP_EOL;
                 exit;
             }
-
         } else {
-            echo 'The original file to translate does not exist !';
+            echo 'The original file to translate does not exist !'.PHP_EOL;
             exit;
         }
     }
