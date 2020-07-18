@@ -1,5 +1,6 @@
 # Srt-PHP-Translator
 [![CodeFactor](https://www.codefactor.io/repository/github/jud3v/srt-php-translator/badge)](https://www.codefactor.io/repository/github/jud3v/srt-php-translator)
+[![Maintainability](https://api.codeclimate.com/v1/badges/3ba6203abe5fe65834ed/maintainability)](https://codeclimate.com/github/jud3v/Srt-PHP-Translator/maintainability)
 ##### this package translates .srt files to another language
 
 #### Requirements:
@@ -26,4 +27,3 @@ Contributing are welcome !
 
 #### known bug:
 1. EN to FR the number `10` will be replaced by `dix`, 'google need to fix it'
-2. `429 TO MANY REQUESTS` to prevent this error the script will wait 1 second for each request (you can remove this in line: 82 if you will use proxy).

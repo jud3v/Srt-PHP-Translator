@@ -64,7 +64,7 @@ class Translate
      * @throws ErrorException
      */
     private static function translate($option)
-    {   $start_time = microtime(false);
+    {   $start_time = time();
         $color = new Colors();
         $file = $option['a'];
         $dist = $option['d'];
@@ -87,11 +87,11 @@ class Translate
                     $ch = fopen($copy,'a');
                     fwrite($ch,$translate->translate($value).PHP_EOL);
                     echo PHP_EOL;
-                    echo $color->getColoredString($i.'|Translating-'.$source.': '. $value,'white','black');
-                    echo $color->getColoredString($i.'|Translated-'.$dist.': '.$translate->translate($value),'green','white').PHP_EOL;
+                    echo $color->getColoredString('Line: '.$i.' | Translating-'.$source.': '. $value,'white','black');
+                    echo $color->getColoredString('Line: '.$i.' | Translated-'.$dist.': '.$translate->translate($value),'green','white').PHP_EOL;
                     fclose($ch);
                 }
-                echo $color->getColoredString("All Is Done ! \n The time of translation: ".($start_time),'green','white').PHP_EOL;
+                echo $color->getColoredString("All Is Done ! \n The time of translation: ".(time() - $start_time).' seconds','green','white').PHP_EOL;
                 exit;
 
             } else {
