@@ -22,3 +22,6 @@ Contributing are welcome !
 
 #### Dependencies:
 [Stichoza/google-translate-php ](https://github.com/Stichoza/google-translate-php)  
+
+#### known bug:
+1. EN to FR the number `10` will be replaced by `dix`, 'google need to fix it'
