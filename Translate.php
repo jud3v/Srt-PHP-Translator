@@ -32,9 +32,9 @@ class Translate
     {
         $color = new \Colors();
         $shortopts  = "";
-        $shortopts .= "f:";  // Langue source du fichier
-        $shortopts .= "d:";  // Langue de destination
-        $shortopts .= "a:";  // Fichier a traduire
+        $shortopts .= "f:";  // source of file
+        $shortopts .= "d:";  // wanted language
+        $shortopts .= "a:";  // file to translate
 
         $longopts  = array(
             "help",     // Valeur requise
@@ -47,8 +47,8 @@ class Translate
                 exit;
             }
         }
-        if (count($options) > 3 || count($options) < 3) {
-            echo $color->getColoredString('Required parameter are missing !','black','red').PHP_EOL;
+        if (count($options) < 3) {
+            echo $color->getColoredString('Required parameter are missing !','white','red').PHP_EOL;
             self::showHelp();
             exit;
         } else {
@@ -63,35 +63,35 @@ class Translate
      * @throws ErrorException
      */
     private static function translate($option)
-    {
+    {   $start_time = microtime(false);
         $color = new Colors();
         $file = $option['a'];
         $dist = $option['d'];
         $source = $option['f'];
 
         if (file_exists($file)) {
-            //copy($file,str_replace('.srt','-translated.srt',$file));
             $copy = str_replace('.srt','-translated-to-'.$dist.'.srt',$file); //get path of copied file.
             echo 'The path of your translated file is: '.$copy.PHP_EOL;
-            $ch = fopen($copy,'w'); // remove content of file with mode w https://www.php.net/manual/fr/function.fopen.php.
+            $ch = fopen($copy,'w'); // create the missing file with flag f and  remove them content  https://www.php.net/manual/fr/function.fopen.php.
             fclose($ch);
 
             if (file_exists($copy)) {
                 $content = file($file); //content of the original file to translate into the copyied file.
 
                 foreach ($content as $key => $value) {
-                    //sleep(0.5);
+                    sleep(1);
                     $translate = new Stichoza\GoogleTranslate\GoogleTranslate();
                     $translate->setSource($source);
                     $translate->setTarget($dist);
                     $ch = fopen($copy,'a');
                     fwrite($ch,$translate->translate($value).PHP_EOL);
-                    echo $color->getColoredString('Translating: '. $value,'white','black');
-                    echo $color->getColoredString('Translated: '.$translate->translate($value),'green','white').PHP_EOL;
+                    echo $color->getColoredString('Translating-'.$source.': '. $value,'white','black');
+                    echo $color->getColoredString('Translated-'.$dist.': '.$translate->translate($value),'green','white').PHP_EOL;
                     fclose($ch);
                 }
-                echo 'All Is Done !'.PHP_EOL;
+                echo $color->getColoredString("All Is Done ! \n The time of translation: ".($start_time),'green','white').PHP_EOL;
                 exit;
+
             } else {
                 echo 'The copy of your file have failed !';
                 exit;

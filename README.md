@@ -26,3 +26,4 @@ Contributing are welcome !
 
 #### known bug:
 1. EN to FR the number `10` will be replaced by `dix`, 'google need to fix it'
+2. `429 TO MANY REQUESTS` to prevent this error the script will wait 1 second for each request (you can remove this in line: 82 if you will use proxy).
