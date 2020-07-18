@@ -36,8 +36,8 @@ Open new issue, I will be happy to help us :
 ## known bug:
 1. EN to FR the number `10` will be replaced by `dix`, 'google need to fix it'
 
-
-**SAO** © [EGOIST](https://github.com/egoist), Released under the [MIT](https://egoist.mit-license.org/) License.<br>
-Authored and maintained by EGOIST with help from contributors ([list](https://github.com/saojs/sao/contributors)).
+## Author
+**jud3v** © [srt-php-translator](https://github.com/jud3v), Released under the [MIT](https://github.com/jud3v/Srt-PHP-Translator/blob/master/LICENSE) License.<br>
+Authored and maintained by [@Jud3v](https://github.com/jud3v) with help from contributors ([list](https://github.com/jud3v/Srt-PHP-Translator/graphs/contributors)).
 
 > GitHub [@Jud3v](https://github.com/jud3v) · Twitter [@jud3v](https://twitter.com/amjud3v)
