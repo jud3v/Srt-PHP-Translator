@@ -7,7 +7,7 @@
 2. composer: `required`
 
 #### How to use ?
-1. clone last release `git clone https://github.com/judikaelB/Srt-PHP-Translator/releases/tag/v1.0.0` or clone directly master branch
+1. clone last release `git clone https://github.com/judikaelB/Srt-PHP-Translator/releases/tag/v1.0.1`
 2. installing dependencies with : ` composer install `
 3. use -a /absolute/path/to/.srt/file 
 4. -f lang source of file to translate  `e.g: -f fr`
