@@ -3,6 +3,7 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/3ba6203abe5fe65834ed/maintainability)](https://codeclimate.com/github/jud3v/Srt-PHP-Translator/maintainability)
 [![CodeInspector](https://www.code-inspector.com/project/11162/score/svg)](https://www.code-inspector.com/project/11162/score/svg)
 [![CodeInspector](https://www.code-inspector.com/project/11162/status/svg)](https://www.code-inspector.com/project/11162/status/svg)
+[![HitCount](http://hits.dwyl.com/jud3v/https://githubcom/jud3v/Srt-PHP-Translator.svg)](http://hits.dwyl.com/jud3v/https://githubcom/jud3v/Srt-PHP-Translator)
 
 ##### this package translates subtitle .srt files to another language
 
