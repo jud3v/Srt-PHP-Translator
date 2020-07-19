@@ -11,11 +11,17 @@
 2. composer: `required`
 
 ## Quick Start 
-1. clone last release ```bash git clone https://github.com/judikaelB/Srt-PHP-Translator.git ```
-2. installing dependencies with : ```bash composer install ```
-3. use ```bash -a``` to set the file to translate ```bash /absolute/path/to/.srt/file ```
-4. use ```bash -f``` to set language source of file to translate  ```bash example: -f fr```
-5. use ```bash -d``` to set the desired language ```example: -d en```
+1. clone last release 
+```bash 
+git clone https://github.com/judikaelB/Srt-PHP-Translator.git
+```
+2. installing dependencies with : 
+```bash 
+composer install
+```
+3. use ```-a``` to set the file to translate ```/absolute/path/to/.srt/file ```
+4. use ```-f``` to set language source of file to translate  ```example: -f fr```
+5. use ```-d``` to set the desired language ```example: -d en```
 
 ## Error ?
 Open new issue, I will be happy to help us !
@@ -23,9 +29,18 @@ Open new issue, I will be happy to help us !
 ## Contributing
 
 1. Fork it!
-2. Create your feature branch: `git checkout -b my-new-feature`
-3. Commit your changes: `git commit -am 'Add some feature'`
-4. Push to the branch: `git push origin my-new-feature`
+2. Create your feature branch: 
+```bash
+git checkout -b my-new-feature
+```
+3. Commit your changes: 
+```bash 
+git commit -am 'Add some feature'
+```
+4. Push to the branch: 
+```bash 
+git push origin my-new-feature
+```
 5. Submit a pull request :D
 
 ## Dependencies:
