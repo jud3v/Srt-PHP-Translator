@@ -109,11 +109,14 @@ class Translate
                     $translate->setSource($source);
                     $translate->setTarget($dist);
                     $ch = fopen($copy,'a');
-                    fwrite($ch,$translate->translate($value).PHP_EOL);
+                    if (preg_match('/[\d]+:[\d]+:[\d]+[\d]+.[\d]+[\W][\-][\-][>][\W][\d]+:[\d]+:[\d]+[\d]+.[\d]+/',$value)){
+                        $timer = $value;
+                    }
+                    fwrite($ch, isset($timer) ? $timer : $translate->translate($value).PHP_EOL);
                     if (!isset($option['q'])){
                         echo PHP_EOL;
-                        echo $color->getColoredString('Line: '.$i.' | Translating-'.$source.': '. $value,'white','black');
-                        echo $color->getColoredString('Line: '.$i.' | Translated-'.$dist.': '.$translate->translate($value),'green','white').PHP_EOL;
+                        echo $color->getColoredString('Line: '.$i.' | Translating-'.$source.': '. $value,'black','white');
+                        echo $color->getColoredString('Line: '.$i.' | Translated-'.$dist.': '.$translate->translate($value).PHP_EOL,'green','white');
                     }
                     fclose($ch);
                 }
