@@ -50,7 +50,7 @@ git push origin my-new-feature
 ## known bug:
 1. EN to FR the number `10` will be replaced by `dix`, 'google need to fix it'
 2. Performance : 1000 lines = 15 minutes
-3. while translating the file google add space and leave one of `-` i will be fix this soon as possible.
+3. while translating the file google add space and leave one of `-` of timer i will be fix this soon as possible.
 
 ## Author
 **jud3v** © [srt-php-translator](https://github.com/jud3v), Released under the [MIT](https://github.com/jud3v/Srt-PHP-Translator/blob/master/LICENSE) License.<br>
